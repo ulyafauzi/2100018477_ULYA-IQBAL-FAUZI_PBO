@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int n;
+	
+	int k=0;
+	do {
+            cout<<"=";
+            k++;
+        }
+        while(k<=40);
+    cout<<"\n           DATA VAKSIN        "<<endl;
+    cout<<"========================================="<<endl;
+    cout<<"Masukan banyak peserta : ";
+	cin>>n;
+	
+	string peserta[n][4];
+	
+	cout<<"Masukan data peserta vaksin :"<<endl;
+	for (int i=0;i<n;i++)
+        {
+			cout<<""<<endl;
+            cout<<"Peserta ke-"<<i+1<<endl;
+            for (int j=0;j<4;j++)
+            {
+                if (j==0)
+                {
+                    cout<<"Nama : ";
+                }
+                else if(j==1)
+                {
+                    cout<<"Jenis Vaksin : ";
+                }
+                else if(j==2)
+                {
+                    cout<<"No Antrian : ";
+                }
+                else
+                {
+                    cout<<"Umur : ";
+                }
+                cin>>peserta[i][j];
+            }
+        }
+	cout<<"----------------------------------------"<<endl;
+    cout<<"\ndata peserta vaksin "<<endl;
+    cout<<"----------------------------------------"<<endl;
+    cout<<"NAMA \tJENIS \tNOMOR \tUMUR"<<endl;
+    for(int i=0;i<n;i++)
+    {
+        for (int j=0; j<4;j++)
+        {
+            cout<<peserta[i][j]<<"\t\t";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
